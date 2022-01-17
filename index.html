@@ -15,9 +15,10 @@
         #cssladrillo{background-color:  red; color:white}
         #cssoveja{background-color: darkgreen; color:white}
         #csstrigo{background-color: rgb(255, 255, 0);color: black!important;}
-        .rango{width: 80%;}
+        #Recolectas{color:white;}
         .tablaRecursos{width: 20px;}
         table td{color:white; border: 1px solid}
+        output{color:white}
     </style>
     <title>Recursos catan</title>
 </head>
@@ -43,6 +44,7 @@
            
             <div class="col"><button class="botonNumero"onclick="tiradaDados(11)">11</button></div>
             <div class="col"><button class="botonNumero"onclick="tiradaDados(12)">12</button></div>
+            
             
         </div>
     </div>
@@ -117,11 +119,29 @@
             <td><input class="tablaRecursos" id="t11" type="text"></td>
             <td><input class="tablaRecursos" id="t12" type="text"></td>
         </tr>
+
     </table>
 
         </thead>
+        
        </div>
+       <p id="Recolectas">Recolectas: </p>                                
                                         
+    </div>
+    <div class="container">
+        <h6 id="segundoTitulo">Control de puntos</h6>
+        <input type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>2</output>
+        <input type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>2</output>
+        <input type="text"><input type="range" value="2" min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>2</output>
+        <input type="text"><input type="range" value="2" min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>2</output>
+        <input type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>2</output>
+        <input type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>2</output>
     </div>
    
        
@@ -135,7 +155,13 @@
     let Voveja = 0
     let Vtrigo = 0
     function recursosAgarrar(numero){
-        alert(`Recolectas: Madera: ${Vmadera} - Ladrillo: ${Vladrillo} - Piedra: ${Vpiedra} - Oveja : ${Voveja} - Trigo: ${Vtrigo}`)
+        let Vmadera  = document.getElementById("m"+numero).value
+        let Vladrillo  = document.getElementById("l"+numero).value
+        let Vpiedra  = document.getElementById("p"+numero).value
+        let Voveja  = document.getElementById("o"+numero).value
+        let Vtrigo  = document.getElementById("t"+numero).value
+        mensaje = `Recolectas: Madera: ${Vmadera} - Ladrillo: ${Vladrillo} - Piedra: ${Vpiedra} - Oveja : ${Voveja} - Trigo: ${Vtrigo}`
+        console.log(document.getElementById("Recolectas").innerText = mensaje)
     }
     function tiradaDados(valor){
         let dado= valor
@@ -143,7 +169,6 @@
             alert ("Conta las cartas y descarta, Si tenes una cantidad impar de cartas, se redondea a su favor, es decir, hacia abajo (por ejemplo, si tiene 9 cartas debe devolver 4)")
         }
         else{
-            console.log(dado)
            recursosAgarrar(dado)
         }
         
