@@ -19,31 +19,34 @@
         .tablaRecursos{width: 20px;}
         table td{color:white; border: 1px solid}
         output{color:white}
-    </style>
+        table{width:100%}
+        .tablaRecursos{width: 100%;}
+        </style>
     <title>Recursos catan</title>
 </head>
 <body>
-    <h4>¿Qué número salió?</h4>
+    
     <div class="container">
+        <h4>¿Qué número salió?</h4> 
         <div class="row">
-            <div class="col"><button class="botonNumero" onclick="tiradaDados(2)">2</button></div>
-            <div class="col"><button class="botonNumero" onclick="tiradaDados(3)">3</button></div>
-            <div class="col"><button class="botonNumero" onclick="tiradaDados(4)">4</button></div>
+            <div class="col"><button class="botonNumero" onclick="recursosAgarrar(2)">2</button></div>
+            <div class="col"><button class="botonNumero" onclick="recursosAgarrar(3)">3</button></div>
+            <div class="col"><button class="botonNumero" onclick="recursosAgarrar(4)">4</button></div>
         </div>
         <div class="row">
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(5)">5</button></div>
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(6)">6</button></div>
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(7)">7</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(5)">5</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(6)">6</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(7)">7</button></div>
         </div>
         <div class="row">
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(8)">8</button></div>
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(9)">9</button></div>
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(10)">10</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(8)">8</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(9)">9</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(10)">10</button></div>
         </div>
         <div class="row">
            
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(11)">11</button></div>
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(12)">12</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(11)">11</button></div>
+            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(12)">12</button></div>
             
             
         </div>
@@ -155,24 +158,20 @@
     let Voveja = 0
     let Vtrigo = 0
     function recursosAgarrar(numero){
+        if (numero != 7){
         let Vmadera  = document.getElementById("m"+numero).value
         let Vladrillo  = document.getElementById("l"+numero).value
         let Vpiedra  = document.getElementById("p"+numero).value
         let Voveja  = document.getElementById("o"+numero).value
         let Vtrigo  = document.getElementById("t"+numero).value
         mensaje = `Recolectas: Madera: ${Vmadera} - Ladrillo: ${Vladrillo} - Piedra: ${Vpiedra} - Oveja : ${Voveja} - Trigo: ${Vtrigo}`
-        console.log(document.getElementById("Recolectas").innerText = mensaje)
+        document.getElementById("Recolectas").innerText = mensaje
+    }else{
+
+        mensaje =  "Conta las cartas y descarta. Si tenes una cantidad impar de cartas, se redondea a su favor, es decir, hacia abajo (por ejemplo, si tiene 9 cartas debe devolver 4)"
+        document.getElementById("Recolectas").innerText = mensaje  
     }
-    function tiradaDados(valor){
-        let dado= valor
-        if (dado==7){
-            alert ("Conta las cartas y descarta, Si tenes una cantidad impar de cartas, se redondea a su favor, es decir, hacia abajo (por ejemplo, si tiene 9 cartas debe devolver 4)")
-        }
-        else{
-           recursosAgarrar(dado)
-        }
-        
-        
-    }
+}
+   
 </script>
 </html>
