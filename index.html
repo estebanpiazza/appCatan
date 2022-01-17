@@ -8,6 +8,7 @@
     <style>
         h4{color:white}
         #segundoTitulo {color:white}
+        body{background-image: url("https://cdn.bhdw.net/im/catan-vr-2019-video-game-papel-pintado-21753_w635.jpg") ;background-repeat: no-repeat;background-size:cover;}
         body{background-color:rgb(2, 2, 90);}
         .botonNumero{width: 100%;}
         #cssmadera{background-color:SaddleBrown ;color:white}
@@ -15,13 +16,18 @@
         #cssladrillo{background-color:  red; color:white}
         #cssoveja{background-color: darkgreen; color:white}
         #csstrigo{background-color: rgb(255, 255, 0);color: black!important;}
-        #Recolectas{color:white;}
+        #Recolectas{color:white;background-color:blue}
         .tablaRecursos{width: 20px;}
         table td{color:white; border: 1px solid}
         output{color:white}
-        table{width:100%}
+        table{width:100%;background-color:blue;}
         .tablaRecursos{width: 100%;}
+        
+        #csssiete{color:white;background-color: black;}
+        td{text-align: center;color:black; }
         </style>
+        
+        
     <title>Recursos catan</title>
 </head>
 <body>
@@ -36,7 +42,7 @@
         <div class="row">
             <div class="col"><button class="botonNumero"onclick="recursosAgarrar(5)">5</button></div>
             <div class="col"><button class="botonNumero"onclick="recursosAgarrar(6)">6</button></div>
-            <div class="col"><button class="botonNumero"onclick="recursosAgarrar(7)">7</button></div>
+            <div class="col"><button id ="csssiete" class="botonNumero"onclick="recursosAgarrar(7)">7</button></div>
         </div>
         <div class="row">
             <div class="col"><button class="botonNumero"onclick="recursosAgarrar(8)">8</button></div>
@@ -57,70 +63,70 @@
        <div class="table">
        <table>
            <tr><td>Recurso</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-        <tr>
-            <td>Madera</td>
-            <td><input class="tablaRecursos" id="m2" type="text"></td>
-            <td><input class="tablaRecursos" id="m3" type="text"></td>
-            <td><input class="tablaRecursos" id="m4" type="text"></td>
-            <td><input class="tablaRecursos" id="m5" type="text"></td>
-            <td><input class="tablaRecursos" id="m6" type="text"></td>
-            <td><input class="tablaRecursos" id="m8" type="text"></td>
-            <td><input class="tablaRecursos" id="m9" type="text"></td>
-            <td><input class="tablaRecursos" id="m10" type="text"></td>
-            <td><input class="tablaRecursos" id="m11" type="text"></td>
-            <td><input class="tablaRecursos" id="m12" type="text"></td>
+        <tr style="background-color: brown;">
+            <td >Madera</td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="m12" type="text"></td>
         </tr>
-        <tr>
-            <td>Piedra</td>
-            <td><input class="tablaRecursos" id="p2" type="text"></td>
-            <td><input class="tablaRecursos" id="p3" type="text"></td>
-            <td><input class="tablaRecursos" id="p4" type="text"></td>
-            <td><input class="tablaRecursos" id="p5" type="text"></td>
-            <td><input class="tablaRecursos" id="p6" type="text"></td>
-            <td><input class="tablaRecursos" id="p8" type="text"></td>
-            <td><input class="tablaRecursos" id="p9" type="text"></td>
-            <td><input class="tablaRecursos" id="p10" type="text"></td>
-            <td><input class="tablaRecursos" id="p11" type="text"></td>
-            <td><input class="tablaRecursos" id="p12" type="text"></td>
+        <tr style="background-color: grey;">
+            <td >Piedra</td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="p12" type="text"></td>
         </tr>
-        <tr>
+        <tr style="background-color: red;">
             <td>Ladrillo</td>
-            <td><input class="tablaRecursos" id="l2" type="text"></td>
-            <td><input class="tablaRecursos" id="l3" type="text"></td>
-            <td><input class="tablaRecursos" id="l4" type="text"></td>
-            <td><input class="tablaRecursos" id="l5" type="text"></td>
-            <td><input class="tablaRecursos" id="l6" type="text"></td>
-            <td><input class="tablaRecursos" id="l8" type="text"></td>
-            <td><input class="tablaRecursos" id="l9" type="text"></td>
-            <td><input class="tablaRecursos" id="l10" type="text"></td>
-            <td><input class="tablaRecursos" id="l11" type="text"></td>
-            <td><input class="tablaRecursos" id="l12" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="l12" type="text"></td>
         </tr>
-        <tr>
+        <tr style="background-color: green;">
             <td>Oveja</td>
-            <td><input class="tablaRecursos" id="o2" type="text"></td>
-            <td><input class="tablaRecursos" id="o3" type="text"></td>
-            <td><input class="tablaRecursos" id="o4" type="text"></td>
-            <td><input class="tablaRecursos" id="o5" type="text"></td>
-            <td><input class="tablaRecursos" id="o6" type="text"></td>
-            <td><input class="tablaRecursos" id="o8" type="text"></td>
-            <td><input class="tablaRecursos" id="o9" type="text"></td>
-            <td><input class="tablaRecursos" id="o10" type="text"></td>
-            <td><input class="tablaRecursos" id="o11" type="text"></td>
-            <td><input class="tablaRecursos" id="o12" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="o12" type="text"></td>
         </tr>
-        <tr>
-            <td>Trigo</td>
-            <td><input class="tablaRecursos" id="t2" type="text"></td>
-            <td><input class="tablaRecursos" id="t3" type="text"></td>
-            <td><input class="tablaRecursos" id="t4" type="text"></td>
-            <td><input class="tablaRecursos" id="t5" type="text"></td>
-            <td><input class="tablaRecursos" id="t6" type="text"></td>
-            <td><input class="tablaRecursos" id="t8" type="text"></td>
-            <td><input class="tablaRecursos" id="t9" type="text"></td>
-            <td><input class="tablaRecursos" id="t10" type="text"></td>
-            <td><input class="tablaRecursos" id="t11" type="text"></td>
-            <td><input class="tablaRecursos" id="t12" type="text"></td>
+        <tr style="background-color: yellow;">
+            <td style="color:black">Trigo</td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" id="t12" type="text"></td>
         </tr>
 
     </table>
@@ -128,12 +134,12 @@
         </thead>
         
        </div>
-       <p id="Recolectas">Recolectas: </p>                                
+       <p id="Recolectas" >Recolectas: </p>                                
                                         
     </div>
     <div class="container">
         <h6 id="segundoTitulo">Control de puntos</h6>
-        <input type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
+        <input  type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
 <output>2</output>
         <input type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
 <output>2</output>
@@ -164,7 +170,7 @@
         let Vpiedra  = document.getElementById("p"+numero).value
         let Voveja  = document.getElementById("o"+numero).value
         let Vtrigo  = document.getElementById("t"+numero).value
-        mensaje = `Recolectas: Madera: ${Vmadera} - Ladrillo: ${Vladrillo} - Piedra: ${Vpiedra} - Oveja : ${Voveja} - Trigo: ${Vtrigo}`
+        mensaje = `Recolectas: Madera: ${Vmadera } - Ladrillo: ${Vladrillo} - Piedra: ${Vpiedra} - Oveja : ${Voveja} - Trigo: ${Vtrigo}`
         document.getElementById("Recolectas").innerText = mensaje
     }else{
 
