@@ -16,6 +16,8 @@
         #cssoveja{background-color: darkgreen; color:white}
         #csstrigo{background-color: rgb(255, 255, 0);color: black!important;}
         .rango{width: 80%;}
+        .tablaRecursos{width: 20px;}
+        table td{color:white; border: 1px solid}
     </style>
     <title>Recursos catan</title>
 </head>
@@ -23,22 +25,22 @@
     <h4>¿Qué número salió?</h4>
     <div class="container">
         <div class="row">
-            <div class="col"><button class="botonNumero" onclick="tiradaDados(1)">1</button></div>
             <div class="col"><button class="botonNumero" onclick="tiradaDados(2)">2</button></div>
             <div class="col"><button class="botonNumero" onclick="tiradaDados(3)">3</button></div>
+            <div class="col"><button class="botonNumero" onclick="tiradaDados(4)">4</button></div>
         </div>
         <div class="row">
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(4)">4</button></div>
             <div class="col"><button class="botonNumero"onclick="tiradaDados(5)">5</button></div>
             <div class="col"><button class="botonNumero"onclick="tiradaDados(6)">6</button></div>
+            <div class="col"><button class="botonNumero"onclick="tiradaDados(7)">7</button></div>
         </div>
         <div class="row">
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(7)">7</button></div>
             <div class="col"><button class="botonNumero"onclick="tiradaDados(8)">8</button></div>
             <div class="col"><button class="botonNumero"onclick="tiradaDados(9)">9</button></div>
+            <div class="col"><button class="botonNumero"onclick="tiradaDados(10)">10</button></div>
         </div>
         <div class="row">
-            <div class="col"><button class="botonNumero"onclick="tiradaDados(10)">10</button></div>
+           
             <div class="col"><button class="botonNumero"onclick="tiradaDados(11)">11</button></div>
             <div class="col"><button class="botonNumero"onclick="tiradaDados(12)">12</button></div>
             
@@ -46,32 +48,79 @@
     </div>
     
     <div class="container">
-        <h6 id="segundoTitulo">¿Dondé tenes recursos?<br>Separá los numeros con comas</h6>
-        <div class="row" id="cssmadera"> 
-            <h6 >Madera: <output id="cantidadMadera">0</output></h6>
-            <input id="inputMadera" type="text">
-            </div>    
-            
-            <div class="row" id="cssladrillo"> 
-                <h6>Ladrillo: <output id="cantidadLadrillo">0</output></h6>
-                <input id="inputLadrillo" type="text"> 
-                </div>
+        <h6 id="segundoTitulo">¿Dondé tenes recursos?<br>Ingresá la cantidad que te da cada número</h6>
+       <div class="table">
+       <table>
+           <tr><td>Recurso</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+        <tr>
+            <td>Madera</td>
+            <td><input class="tablaRecursos" id="m2" type="text"></td>
+            <td><input class="tablaRecursos" id="m3" type="text"></td>
+            <td><input class="tablaRecursos" id="m4" type="text"></td>
+            <td><input class="tablaRecursos" id="m5" type="text"></td>
+            <td><input class="tablaRecursos" id="m6" type="text"></td>
+            <td><input class="tablaRecursos" id="m8" type="text"></td>
+            <td><input class="tablaRecursos" id="m9" type="text"></td>
+            <td><input class="tablaRecursos" id="m10" type="text"></td>
+            <td><input class="tablaRecursos" id="m11" type="text"></td>
+            <td><input class="tablaRecursos" id="m12" type="text"></td>
+        </tr>
+        <tr>
+            <td>Piedra</td>
+            <td><input class="tablaRecursos" id="p2" type="text"></td>
+            <td><input class="tablaRecursos" id="p3" type="text"></td>
+            <td><input class="tablaRecursos" id="p4" type="text"></td>
+            <td><input class="tablaRecursos" id="p5" type="text"></td>
+            <td><input class="tablaRecursos" id="p6" type="text"></td>
+            <td><input class="tablaRecursos" id="p8" type="text"></td>
+            <td><input class="tablaRecursos" id="p9" type="text"></td>
+            <td><input class="tablaRecursos" id="p10" type="text"></td>
+            <td><input class="tablaRecursos" id="p11" type="text"></td>
+            <td><input class="tablaRecursos" id="p12" type="text"></td>
+        </tr>
+        <tr>
+            <td>Ladrillo</td>
+            <td><input class="tablaRecursos" id="l2" type="text"></td>
+            <td><input class="tablaRecursos" id="l3" type="text"></td>
+            <td><input class="tablaRecursos" id="l4" type="text"></td>
+            <td><input class="tablaRecursos" id="l5" type="text"></td>
+            <td><input class="tablaRecursos" id="l6" type="text"></td>
+            <td><input class="tablaRecursos" id="l8" type="text"></td>
+            <td><input class="tablaRecursos" id="l9" type="text"></td>
+            <td><input class="tablaRecursos" id="l10" type="text"></td>
+            <td><input class="tablaRecursos" id="l11" type="text"></td>
+            <td><input class="tablaRecursos" id="l12" type="text"></td>
+        </tr>
+        <tr>
+            <td>Oveja</td>
+            <td><input class="tablaRecursos" id="o2" type="text"></td>
+            <td><input class="tablaRecursos" id="o3" type="text"></td>
+            <td><input class="tablaRecursos" id="o4" type="text"></td>
+            <td><input class="tablaRecursos" id="o5" type="text"></td>
+            <td><input class="tablaRecursos" id="o6" type="text"></td>
+            <td><input class="tablaRecursos" id="o8" type="text"></td>
+            <td><input class="tablaRecursos" id="o9" type="text"></td>
+            <td><input class="tablaRecursos" id="o10" type="text"></td>
+            <td><input class="tablaRecursos" id="o11" type="text"></td>
+            <td><input class="tablaRecursos" id="o12" type="text"></td>
+        </tr>
+        <tr>
+            <td>Trigo</td>
+            <td><input class="tablaRecursos" id="t2" type="text"></td>
+            <td><input class="tablaRecursos" id="t3" type="text"></td>
+            <td><input class="tablaRecursos" id="t4" type="text"></td>
+            <td><input class="tablaRecursos" id="t5" type="text"></td>
+            <td><input class="tablaRecursos" id="t6" type="text"></td>
+            <td><input class="tablaRecursos" id="t8" type="text"></td>
+            <td><input class="tablaRecursos" id="t9" type="text"></td>
+            <td><input class="tablaRecursos" id="t10" type="text"></td>
+            <td><input class="tablaRecursos" id="t11" type="text"></td>
+            <td><input class="tablaRecursos" id="t12" type="text"></td>
+        </tr>
+    </table>
 
-            <div class="row" id="csspiedra"> 
-            <h6>Piedra: <output id="cantidadPiedra">0</output> </h6>
-            <input id="inputPiedra" type="text">
-            </div>
-
-            <div class="row" id="cssoveja"> 
-                <h6>Oveja: <output id="cantidadOveja">0</output> </h6> <br>
-                <input id="inputOveja" type="text">
-                </div>
-
-            <div class="row" id="csstrigo"> 
-            <h6 font-color="black">Trigo: <output id="cantidadTrigo">0</output>
-                 </h6>
-                 <input id="inputTrigo" type="text">
-             </div>
+        </thead>
+       </div>
                                         
     </div>
    
@@ -80,62 +129,22 @@
 
 </body>
 <script>
-
-
-sliderT.addEventListener("change",function(){
-    myFunctionT();
-})
-sliderM.addEventListener("change",function(){
-    myFunctionO();
-})
-sliderO.addEventListener("change",function(){
-    myFunctionO();
-})
-sliderL.addEventListener("change",function(){
-    myFunction();
-})
-sliderP.addEventListener("change",function(){
-    myFunctionP();
-})
-
-
-
-function myFunctionT() {
-   let trigo = document.getElementById("sliderT").value //gets the oninput value
-   document.getElementById("cantidadTrigo").innerHTML = trigo
-}
-function myFunctionM() {
-   let madera = document.getElementById("sliderM").value //gets the oninput value
-   document.getElementById("cantidadMadera").innerHTML = madera
-}
-function myFunctionL() {
-   let ladrillo = document.getElementById("sliderL").value //gets the oninput value
-   document.getElementById("cantidadLadrillo").innerHTML = ladrillo
-}
-function myFunctionO() {
-   let oveja = document.getElementById("sliderO").value //gets the oninput value
-   document.getElementById("cantidadOveja").innerHTML = oveja
-}
-function myFunctionP() {
-   let piedra = document.getElementById("sliderP").value //gets the oninput value
-   document.getElementById("cantidadPiedra").innerHTML = piedra
-}
-    
-   
-    
-
-
-
-
-
-    
+    let Vmadera = 0
+    let Vladrillo = 0
+    let Vpiedra = 0
+    let Voveja = 0
+    let Vtrigo = 0
+    function recursosAgarrar(numero){
+        alert(`Recolectas: Madera: ${Vmadera} - Ladrillo: ${Vladrillo} - Piedra: ${Vpiedra} - Oveja : ${Voveja} - Trigo: ${Vtrigo}`)
+    }
     function tiradaDados(valor){
         let dado= valor
         if (dado==7){
             alert ("Conta las cartas y descarta, Si tenes una cantidad impar de cartas, se redondea a su favor, es decir, hacia abajo (por ejemplo, si tiene 9 cartas debe devolver 4)")
         }
         else{
-            alert(`Recolectas: Madera $`)
+            console.log(dado)
+           recursosAgarrar(dado)
         }
         
         
