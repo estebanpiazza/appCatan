@@ -8,7 +8,7 @@
     <style>
         h4{color:white}
         #segundoTitulo {color:white}
-        body{background-image: url("https://cdn.bhdw.net/im/catan-vr-2019-video-game-papel-pintado-21753_w635.jpg") ;background-repeat: no-repeat;background-size:cover;}
+        body{background-image: url("https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg") ;background-repeat: no-repeat;background-size:cover;}
         body{background-color:rgb(2, 2, 90);}
         .botonNumero{width: 100%;}
         #cssmadera{background-color:SaddleBrown ;color:white}
@@ -16,15 +16,25 @@
         #cssladrillo{background-color:  red; color:white}
         #cssoveja{background-color: darkgreen; color:white}
         #csstrigo{background-color: rgb(255, 255, 0);color: black!important;}
-        #Recolectas{color:white;background-color:blue}
+        #Recolectas{color:white;background-color:rgb(2, 2, 90)}
         .tablaRecursos{width: 20px;}
         table td{color:white; border: 1px solid}
         output{color:white}
-        table{width:100%;background-color:blue;}
+        table{width:100%;background-color:rgb(2, 2, 90);}
         .tablaRecursos{width: 100%;}
         
         #csssiete{color:white;background-color: black;}
         td{text-align: center;color:black; }
+        footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    
+    color:white;
+     text-align: center;
+}
         </style>
         
         
@@ -137,7 +147,7 @@
        <p id="Recolectas" >Recolectas: </p>                                
                                         
     </div>
-    <div class="container">
+    <div class="container" >
         <h6 id="segundoTitulo">Control de puntos</h6>
         <input  type="text"><input type="range" value="2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value">
 <output>2</output>
@@ -154,9 +164,12 @@
     </div>
    
        
-    
+    <footer>
+        Herramienta creada por Esteban Piazza para toda la comunidad catanera.
+    </footer>
 
 </body>
+
 <script>
     let Vmadera = 0
     let Vladrillo = 0
