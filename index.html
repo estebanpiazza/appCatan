@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
+
 /* The side navigation menu */
 
 .sidenav {
@@ -70,15 +71,6 @@
   .sidenav a {font-size: 18px;}
   .sidenav p {font-size: 18px;}
 }
-
-
-
-
-
-
-
-
-
         h4{color:white}
         #segundoTitulo {color:white}
         body{background-image: url("https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg") ;background-repeat: no-repeat;background-size:cover;}
@@ -94,12 +86,11 @@
         table td{color:white; border: 1px solid}
         output{color:white}
         table{width:100%;background-color:rgb(2, 2, 90);}
-        .tablaRecursos{width: 100%;}
-        
+        .tablaRecursos{width:80%;}
+        .controlPuntos{display:none;}
         #csssiete{color:white;background-color: black;}
         td{text-align: center;color:black; }
-        footer {
-    
+        footer {  
     right: 0;
     bottom: 0;
     left: 0;
@@ -108,6 +99,7 @@
     color:white;
      text-align: center;
 }
+    
         </style>
         
         
@@ -234,7 +226,7 @@
        <p id="Recolectas" >Recolectas: </p>                                
                                         
     </div>
-    <div class="container" >
+    <div class="container" style="color:white; background-color:grey" >
         <h6 id="segundoTitulo">Control de puntos</h6>
         <input  type="text" id="nombrej1"><input type="range" value="2" id="j1"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()">
 <output>2</output>
@@ -251,7 +243,7 @@
     </div>
     <br>
     <div class = "container">
-    <h6 id="segundoTitulo">Control de dados</h6>
+    <h6 id="segundoTitulo">Control de dados</h6> 
     <p id="texto" style="color:white; background-color:blue">Numero 2: 0/  Numero 3: 0/  Numero 4: 0/  Numero 5: 0/  Numero 6: 0/  Numero 7: 0/  Numero 8: 0/ Numero 9: 0/ Numero 10: 0/ Numero 11: 0/ Numero 12: 0</p>
     </div>
        
