@@ -119,13 +119,13 @@
         #cssoveja{background-color: darkgreen; color:white}
         #csstrigo{background-color: rgb(255, 255, 0);color: black!important;}
         #Recolectas{color:white;background-color:rgb(2, 2, 90)}
-        .tablaRecursos{width: 20px;}
+        .tablaRecursos{width:100%;}
         .tablaRecursosPrincipal td{color:white; border: 1px solid}
         .tablaDatos td{color:white; border: 1px solid}
         .tablaRecoleccion td{color:white; border: 1px solid}
         output{color:white}
         .tablaRecursosPrincipal{width:100%;background-color:rgb(2, 2, 90);}
-        .tablaRecursos{width: 80%;}
+        .tablaRecursos{width: 100%;}
         .controlPuntos{display:none;}
         .tablaDatos{width:100%;background-color:rgb(2, 2, 90);}
         .tablaRecoleccion{width:100%;background-color:rgb(2, 2, 90);}
@@ -264,7 +264,7 @@
         <tr><td colspan="6" id="Recolectas" style="text-align:left"> Recolectas:</td></tr>   
         <tr><td>Recursos</td><td>Madera</td><td>Ladrillo</td><td>Piedra</td><td>Oveja</td><td>Trigo</td>
         </tr>
-        <tr><td>Cantidad</td><td id="cantidadMadera" >0</td><td id="cantidadLadrillo">0</td><td id="cantidadPiedra">0</td><td id="cantidadOveja">0</td><td id="cantidadTrigo">0</td></tr>
+        <tr><td>Cantidad</td><td id="cantidadMadera" ></td><td id="cantidadLadrillo"></td><td id="cantidadPiedra"></td><td id="cantidadOveja"></td><td id="cantidadTrigo"></td></tr>
     </table>                                
               <hr>                          
     </div>
@@ -351,8 +351,9 @@
         
     }else{
 
-        mensaje =  " Recolectas: Conta las cartas y descarta. Si tenes una cantidad impar de cartas, se redondea a tu favor, es decir, hacia abajo (por ejemplo, si tiene 9 cartas debes devolver 4)"
-        document.getElementById("Recolectas").innerText = mensaje  
+        mensaje =  "Contá las cartas, si tenes más de 7 descartá. Si tenes una cantidad impar de cartas, se redondea a tu favor, es decir, hacia abajo.\n  Por ejemplo, si tiene 9 cartas debes devolver 4"
+        abrirModal(mensaje)
+        
     }
 }
 /* Set the width of the side navigation to 250px */
