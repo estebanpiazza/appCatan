@@ -142,8 +142,8 @@
 <body>
     
     <div class="container">
-        
-        <h4><a onclick="openNav()"></a><i class="fas fa-bars" onclick="openNav()"></i> ¿Qué número salió?</h4> 
+      <button style="float:right" id="fondo" onclick="cambiarFondo()">Quitar/poner fondo</button>
+        <h4><a onclick="openNav()"></a><i class="fas fa-bars" onclick="openNav()"></i> ¿Qué número salió?</h4>  
         <div class="row">
             <div class="col"><button class="botonNumero" onclick="recursosAgarrar(2)">2</button></div>
             <div class="col"><button class="botonNumero" onclick="recursosAgarrar(3)">3</button></div>
@@ -311,6 +311,17 @@
 </body>
 
 <script>
+  let estadoFondo = 1
+  
+  function cambiarFondo(){
+    if ( estadoFondo%2 == 1){
+      estadoFondo +=1
+    document.body.style.backgroundImage  = "url('negro.png')";
+  }else{
+    estadoFondo +=1
+    document.body.style.backgroundImage  = "url('https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg')";
+    
+  }}
     let salidaDados = [0,0,0,0,0,0,0,0,0,0,0,0,0]
     let cantidadesDados 
     let Vmadera = 0
