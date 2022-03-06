@@ -311,14 +311,14 @@
 </body>
 
 <script>
-  let estadoFondo = 1
+  let estadoFondo = true
   
   function cambiarFondo(){
-    if ( estadoFondo%2 == 1){
-      estadoFondo +=1
+    if ( estadoFondo == true){
+      estadoFondo = false
     document.body.style.backgroundImage  = "url('negro.png')";
   }else{
-    estadoFondo +=1
+    estadoFondo = true
     document.body.style.backgroundImage  = "url('https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg')";
     
   }}
