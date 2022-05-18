@@ -183,7 +183,15 @@
      <a href="https://mpago.la/29eT76V">Si queres ayudarme a comprar alimento para  Donnita </a>
         <a href="https://www.wallpaperflare.com/landscape-catan-vr-4k-8k-wallpaper-cxahu" target="blank">El fondo es de acá</a>
       </div>
-    
+      <hr>
+      <div class="container">
+      <table class ="tablaRecoleccion">
+        <tr><td colspan="6" id="Recolectas" style="text-align:left"> Recolectas:</td></tr>   
+        <tr><td>Recursos</td><td style="background-color: brown;">Madera</td><td style="background-color: red;">Ladrillo</td><td style="background-color: grey;">Piedra</td><td style="background-color: green;">Oveja</td><td style="background-color: yellow;color:black">Trigo</td>
+        </tr>
+        <tr><td>Cantidad</td><td id="cantidadMadera" style="background-color: brown;" ></td><td id="cantidadLadrillo" style="background-color: red;"></td><td id="cantidadPiedra" style="background-color: grey;"></td><td id="cantidadOveja" style="background-color: green;"></td><td id="cantidadTrigo" style="background-color: yellow;color:black"></td></tr>
+    </table>    .
+  </div>                            
     <div class="container">
         <h6 id="segundoTitulo">¿Dondé tenes recursos?<br>Ingresá la cantidad que te da cada número</h6>
        <div class="table">
@@ -261,13 +269,7 @@
         
        </div>
        
-       <table class ="tablaRecoleccion">
-        <tr><td colspan="6" id="Recolectas" style="text-align:left"> Recolectas:</td></tr>   
-        <tr><td>Recursos</td><td style="background-color: brown;">Madera</td><td style="background-color: red;">Ladrillo</td><td style="background-color: grey;">Piedra</td><td style="background-color: green;">Oveja</td><td style="background-color: yellow;color:black">Trigo</td>
-        </tr>
-        <tr><td>Cantidad</td><td id="cantidadMadera" style="background-color: brown;" ></td><td id="cantidadLadrillo" style="background-color: red;"></td><td id="cantidadPiedra" style="background-color: grey;"></td><td id="cantidadOveja" style="background-color: green;"></td><td id="cantidadTrigo" style="background-color: yellow;color:black"></td></tr>
-    </table>                                
-              <hr>                          
+                                 
     </div>
     <div class="container" style="color:white; background-color:grey" >
         <h6 id="segundoTitulo">Control de puntos</h6>
@@ -403,6 +405,13 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+if (typeof(Storage) !== "undefined") {
+  let datos = {
+    
+  }
+} else {
+    alert("Tu navegador no acepta el guardado de datos. Avanza con precaución. (no refresques la pagina)")
 }
 </script>
 </html>
