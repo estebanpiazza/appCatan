@@ -4,6 +4,12 @@ function borrarData() {
 
 
 function guardar() {
+let nombrej1 = document.getElementById("nombrej1").value;
+let nombrej2 = document.getElementById("nombrej2").value;
+let nombrej3 = document.getElementById("nombrej3").value;
+let nombrej4 = document.getElementById("nombrej4").value;
+let nombrej5 = document.getElementById("nombrej5").value;
+let nombrej6 = document.getElementById("nombrej6").value;
 let m2 = document.getElementById("m2").value;
 let m3 = document.getElementById("m3").value;
 let m4 = document.getElementById("m4").value;
@@ -56,6 +62,13 @@ let l11 = document.getElementById("l11").value;
 let l12 = document.getElementById("l12").value;
 
 /************************************************** */
+
+localStorage.setItem("nombrej1", nombrej1);
+localStorage.setItem("nombrej2", nombrej2);
+localStorage.setItem("nombrej3", nombrej3);
+localStorage.setItem("nombrej4", nombrej4);
+localStorage.setItem("nombrej5", nombrej5);
+localStorage.setItem("nombrej6", nombrej6);
 
 localStorage.setItem("m2", m2);
 localStorage.setItem("m3", m3);
@@ -117,6 +130,12 @@ localStorage.setItem("l12", l12);
 
 
 window.onload = function cargarDatos() {
+    document.getElementById("nombrej1").value = localStorage.getItem("nombrej1")
+    document.getElementById("nombrej2").value = localStorage.getItem("nombrej2")
+    document.getElementById("nombrej3").value = localStorage.getItem("nombrej3")
+    document.getElementById("nombrej4").value = localStorage.getItem("nombrej4")
+    document.getElementById("nombrej5").value = localStorage.getItem("nombrej5")
+    document.getElementById("nombrej6").value = localStorage.getItem("nombrej6")
     document.getElementById("m2").value = localStorage.getItem("m2");
     document.getElementById("m3").value = localStorage.getItem("m3");
     document.getElementById("m4").value = localStorage.getItem("m4");
