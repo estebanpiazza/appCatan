@@ -212,7 +212,7 @@
            <tr><td>Recurso</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
         <tr style="background-color: brown;">
             <td >Madera</td>
-            <td><input class="tablaRecursos" onfocusout="guardar()" id="m2" type="text"></td>
+            <td><input class="tablaRecursos" onfocusout="guardar()" inputmode="numeric"  id="m2" type="text"></td>
             <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m3" type="text"></td>
             <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m4" type="text"></td>
             <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m5" type="text"></td>
@@ -279,10 +279,8 @@
     </table>
 
         </thead>
-        
-       </div>
-       
-                                 
+        </div>
+
     </div>
     <div class="container" style="color:white; background-color:grey" >
         <h6 id="segundoTitulo">Control de puntos</h6>
@@ -320,7 +318,7 @@
       </div>
       <div id="mybutton">
         <a style="left: 30px;">
-          <button class="feedback" >Borrar data</button></a>
+          <button class="feedback" onclick="borrarData()">Borrar data</button></a>
       </div>
     <div id="myModal" class="modal">
 
