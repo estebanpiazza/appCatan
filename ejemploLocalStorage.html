@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+// Store
+localStorage.lastname = document.getElementById("nombre").value ="Hola";
+console.log(localStorage.lastname)
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.lastname;
+</script>
+</head>
+<body>
+<input type="text" id="userInput" onfocusout="guardarData()">
+​<h1>The Window Object</h1>
+<h2>The localStorage Property</h2>
+
+<p>Saved name is:</p>
+<p id="demo"></p>
+
+
+<script>
+    console.log(localStorage.getItem("key"));
+function guardarData() {
+    let input;
+     input = document.getElementById("userInput").value;
+    console.log(input)
+    localStorage.setItem("key", input);
+    console.log(localStorage.getItem("key"));
+}
+
+
+
+</script>
+
+</body>
+</html>
+
