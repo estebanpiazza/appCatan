@@ -212,7 +212,7 @@
            <tr><td>Recurso</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
         <tr style="background-color: brown;">
             <td >Madera</td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m2" type="text"></td>
+            <td><input class="tablaRecursos" onfocusout="guardar()" id="m2" type="text"></td>
             <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m3" type="text"></td>
             <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m4" type="text"></td>
             <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m5" type="text"></td>
@@ -318,6 +318,10 @@
         <a href="https://contacto-alpha.vercel.app" target="_blank">
           <button class="feedback">Contacto</button></a>
       </div>
+      <div id="mybutton">
+        <a style="left: 30px;">
+          <button class="feedback" >Borrar data</button></a>
+      </div>
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -328,226 +332,8 @@
 
       </div>
       
-
-
 </body>
 
-<script>
-  let estadoFondo = true
-  
-  function cambiarFondo(){
-    if ( estadoFondo == true){
-      estadoFondo = false
-    document.body.style.backgroundImage  = "url('negro.png')";
-  }else{
-    estadoFondo = true
-    document.body.style.backgroundImage  = "url('https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg')";
-    
-  }}
-    let salidaDados = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    let cantidadesDados 
-    let Vmadera = 0
-    let Vladrillo = 0
-    let Vpiedra = 0
-    let Voveja = 0
-    let Vtrigo = 0
-    function ganador(){
-        for (let i = 1; i< 7;i++){
-            
-            let puntos = document.getElementById("j"+i).value
-            if(puntos == 10){
-                let nombreGanador = document.getElementById("nombrej"+i).value
-                let ganador= ("El ganador es el jugador: "+ nombreGanador) 
-                abrirModal(ganador)
-            }
-        }
-    }
-    function recursosAgarrar (numero){
-
-        document.getElementById("ultimoDado").innerText = "Ultimo dado: "+numero
-        numeroParseado = parseInt(numero)
-        
-        document.getElementById("cantidad"+numeroParseado).innerText=  parseInt(document.getElementById("cantidad"+numeroParseado).innerText) + 1   
-        if (numero != 7){
-        let Vmadera  = document.getElementById("m"+numero).value
-        let Vladrillo  = document.getElementById("l"+numero).value
-        let Vpiedra  = document.getElementById("p"+numero).value
-        let Voveja  = document.getElementById("o"+numero).value
-        let Vtrigo  = document.getElementById("t"+numero).value
-        mensaje = `Recolectas:`
-        document.getElementById("Recolectas").innerText = mensaje
-        document.getElementById("cantidadMadera").innerHTML= Vmadera
-        document.getElementById("cantidadLadrillo").innerHTML= Vladrillo
-        document.getElementById("cantidadPiedra").innerHTML= Vpiedra
-        document.getElementById("cantidadOveja").innerHTML= Voveja
-        document.getElementById("cantidadTrigo").innerHTML= Vtrigo
-  
-        
-    }else{
-
-        mensaje =  "Contá las cartas, si tenes más de 7 descartá. Si tenes una cantidad impar de cartas, se redondea a tu favor, es decir, hacia abajo.\n  Por ejemplo, si tiene 9 cartas debes devolver 4"
-        abrirModal(mensaje)
-        
-    }
-}
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "400px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
- 
- // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
- function abrirModal(mensaje) {
-    document.getElementById("mensajeGanador").innerText= mensaje
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function(mensaje) {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-if (typeof(Storage) !== "undefined") {
-  let datos = {
-    
-  }
-} else {
-    alert("Tu navegador no acepta el guardado de datos. Avanza con precaución. (no refresques la pagina)")
-}
-
-let datosAGuardar = {
-j1:document.getElementById("nombrej1").value,
-m2:document.getElementById("m2").value,
-m3:document.getElementById("m3").value,
-m4:document.getElementById("m4").value,
-m5:document.getElementById("m5").value,
-m6:document.getElementById("m6").value,
-m8:document.getElementById("m8").value,
-m9:document.getElementById("m9").value,
-m10:document.getElementById("m10").value,
-m11:document.getElementById("m11").value,
-m12:document.getElementById("m12").value,
-p2:document.getElementById("p2").value,
-p3:document.getElementById("p3").value,
-p4:document.getElementById("p4").value,
-p5:document.getElementById("p5").value,
-p6:document.getElementById("p6").value,
-p8:document.getElementById("p8").value,
-p9:document.getElementById("p9").value,
-p10:document.getElementById("p10").value,
-p11:document.getElementById("p11").value,
-p12:document.getElementById("p12").value,
-t2:document.getElementById("t2").value,
-t3:document.getElementById("t3").value,
-t4:document.getElementById("t4").value,
-t5:document.getElementById("t5").value,
-t6:document.getElementById("t6").value,
-t8:document.getElementById("t8").value,
-t9:document.getElementById("t9").value,
-t10:document.getElementById("t10").value,
-t11:document.getElementById("t11").value,
-t12:document.getElementById("t12").value,
-o2:document.getElementById("o2").value,
-o3:document.getElementById("o3").value,
-o4:document.getElementById("o4").value,
-o5:document.getElementById("o5").value,
-o6:document.getElementById("o6").value,
-o8:document.getElementById("o8").value,
-o9:document.getElementById("o9").value,
-o10:document.getElementById("o10").value,
-o11:document.getElementById("o11").value,
-o12:document.getElementById("o12").value,
-l2:document.getElementById("l2").value,
-l3:document.getElementById("l3").value,
-l4:document.getElementById("l4").value,
-l5:document.getElementById("l5").value,
-l6:document.getElementById("l6").value,
-l8:document.getElementById("l8").value,
-l9:document.getElementById("l9").value,
-l10:document.getElementById("l10").value,
-l11:document.getElementById("l11").value,
-l12:document.getElementById("l12").value,
-}
-
-
-function guardar(){
-let datosAGuardar = {
-j1:document.getElementById("nombrej1").value,
-m2:document.getElementById("m2").value,
-m3:document.getElementById("m3").value,
-m4:document.getElementById("m4").value,
-m5:document.getElementById("m5").value,
-m6:document.getElementById("m6").value,
-m8:document.getElementById("m8").value,
-m9:document.getElementById("m9").value,
-m10:document.getElementById("m10").value,
-m11:document.getElementById("m11").value,
-m12:document.getElementById("m12").value,
-p2:document.getElementById("p2").value,
-p3:document.getElementById("p3").value,
-p4:document.getElementById("p4").value,
-p5:document.getElementById("p5").value,
-p6:document.getElementById("p6").value,
-p8:document.getElementById("p8").value,
-p9:document.getElementById("p9").value,
-p10:document.getElementById("p10").value,
-p11:document.getElementById("p11").value,
-p12:document.getElementById("p12").value,
-t2:document.getElementById("t2").value,
-t3:document.getElementById("t3").value,
-t4:document.getElementById("t4").value,
-t5:document.getElementById("t5").value,
-t6:document.getElementById("t6").value,
-t8:document.getElementById("t8").value,
-t9:document.getElementById("t9").value,
-t10:document.getElementById("t10").value,
-t11:document.getElementById("t11").value,
-t12:document.getElementById("t12").value,
-o2:document.getElementById("o2").value,
-o3:document.getElementById("o3").value,
-o4:document.getElementById("o4").value,
-o5:document.getElementById("o5").value,
-o6:document.getElementById("o6").value,
-o8:document.getElementById("o8").value,
-o9:document.getElementById("o9").value,
-o10:document.getElementById("o10").value,
-o11:document.getElementById("o11").value,
-o12:document.getElementById("o12").value,
-l2:document.getElementById("l2").value,
-l3:document.getElementById("l3").value,
-l4:document.getElementById("l4").value,
-l5:document.getElementById("l5").value,
-l6:document.getElementById("l6").value,
-l8:document.getElementById("l8").value,
-l9:document.getElementById("l9").value,
-l10:document.getElementById("l10").value,
-l11:document.getElementById("l11").value,
-l12:document.getElementById("l12").value,
-}
-localStorage.setItem("objeto",datosAGuardar)
-console.log(datosAGuardar)
-//https://www.acontracorrientech.com/local-storage-en-javascript-guia-completa/
-}
-
-
-</script>
+<script src="main.js"></script>
+<script src="localstorage.js"></script>
 </html>
