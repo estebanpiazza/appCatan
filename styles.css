@@ -184,7 +184,7 @@ output {
 
 #control-puntos{
     width: 100%;
-    background-color: grey;    
+    background-color:rgb(2, 2, 90);    
 }
 
 .tablaDatos {
@@ -202,7 +202,8 @@ output {
 
 #control-dados{
     color:white;
-    background-color:blue;
+    background-color:rgb(2, 2, 90);
+    margin-bottom: 50px;
 
 }
 td {

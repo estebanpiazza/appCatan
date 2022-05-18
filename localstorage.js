@@ -1,5 +1,62 @@
 function borrarData() {
     localStorage.clear();
+    document.getElementById("nombrej1").value = "";
+    document.getElementById("nombrej2").value = "";
+    document.getElementById("nombrej3").value = "";
+    document.getElementById("nombrej4").value = "";
+    document.getElementById("nombrej5").value = "";
+    document.getElementById("nombrej6").value = "";
+    document.getElementById("m2").value = "";
+    document.getElementById("m3").value = "";
+    document.getElementById("m4").value = "";
+    document.getElementById("m5").value = "";
+    document.getElementById("m6").value = "";
+    document.getElementById("m8").value = "";
+    document.getElementById("m9").value = "";
+    document.getElementById("m10").value = "";
+    document.getElementById("m11").value = "";
+    document.getElementById("m12").value = "";
+    document.getElementById("p2").value = "";
+    document.getElementById("p3").value = "";
+    document.getElementById("p4").value = "";
+    document.getElementById("p5").value = "";
+    document.getElementById("p6").value = "";
+    document.getElementById("p8").value = "";
+    document.getElementById("p9").value = "";
+    document.getElementById("p10").value = "";
+    document.getElementById("p11").value = "";
+    document.getElementById("p12").value = "";
+    document.getElementById("t2").value = "";
+    document.getElementById("t3").value = "";
+    document.getElementById("t4").value = "";
+    document.getElementById("t5").value = "";
+    document.getElementById("t6").value = "";
+    document.getElementById("t8").value = "";
+    document.getElementById("t9").value = "";
+    document.getElementById("t10").value = "";
+    document.getElementById("t11").value = "";
+    document.getElementById("t12").value = "";
+    document.getElementById("o2").value = "";
+    document.getElementById("o3").value = "";
+    document.getElementById("o4").value = "";
+    document.getElementById("o5").value = "";
+    document.getElementById("o6").value = "";
+    document.getElementById("o8").value = "";
+    document.getElementById("o9").value = "";
+    document.getElementById("o10").value = "";
+    document.getElementById("o11").value = "";
+    document.getElementById("o12").value = "";
+    document.getElementById("l2").value = "";
+    document.getElementById("l3").value = "";
+    document.getElementById("l4").value = "";
+    document.getElementById("l5").value = "";
+    document.getElementById("l6").value = "";
+    document.getElementById("l8").value = "";
+    document.getElementById("l9").value = "";
+    document.getElementById("l10").value = "";
+    document.getElementById("l11").value = "";
+    document.getElementById("l12").value = "";
+
 }
 
 
