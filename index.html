@@ -6,148 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style>
-      .feedback {
-  background-color : #31B0D5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  border-color: #46b8da;
-}
-
-#mybutton {
-  position: fixed;
-  bottom: -4px;
-  right: 10px;
-}
-        /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* The side navigation menu */
-
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  text-decoration: underline;
-  
-}
-.sidenav p {
-  padding: 0px 8px 0px 32px ;
-  text-decoration: none;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  
-}
-.sidenav .subrayado{
-    text-decoration: underline;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-  .sidenav p {font-size: 18px;}
-}
-        h4{color:white}
-        #segundoTitulo {color:white}
-        body{background-image: url("https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg") ;background-repeat: no-repeat;background-size:cover;}
-        body{background-color:rgb(2, 2, 90);}
-        .botonNumero{width: 100%;}
-        #cssmadera{background-color:SaddleBrown ;color:white}
-        #csspiedra{background-color: grey;color:white}
-        #cssladrillo{background-color:  red; color:white}
-        #cssoveja{background-color: darkgreen; color:white}
-        #csstrigo{background-color: rgb(255, 255, 0);color: black!important;}
-        #Recolectas{color:white;background-color:rgb(2, 2, 90)}
-        .tablaRecursos{width:100%;}
-        .tablaRecursosPrincipal td{color:white; border: 1px solid}
-        .tablaDatos td{color:white; border: 1px solid}
-        .tablaRecoleccion td{color:white; border: 1px solid}
-        output{color:white}
-        .tablaRecursosPrincipal{width:100%;background-color:rgb(2, 2, 90);}
-        .tablaRecursos{width: 100%;}
-        .controlPuntos{display:none;}
-        .tablaDatos{width:100%;background-color:rgb(2, 2, 90);}
-        .tablaRecoleccion{width:100%;background-color:rgb(2, 2, 90);}
-        #csssiete{color:white;background-color: black;}
-        td{text-align: center;color:black; }
-        footer {right: 0;bottom: 0;left: 0;padding: 1rem;color:white;    text-align: center;
-}
-    
-        </style>
+    <link rel="stylesheet" href="styles.css">
         
         
     <title>Recursos catan</title>
@@ -212,68 +71,68 @@
            <tr><td>Recurso</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
         <tr style="background-color: brown;">
             <td >Madera</td>
-            <td><input class="tablaRecursos" onfocusout="guardar()" inputmode="numeric"  id="m2" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m3" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m4" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m5" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m6" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m8" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m9" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m10" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m11" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="m12" type="text"></td>
+            <td><input class="tablaRecursos" oninput="guardar()" inputmode="numeric"  id="m2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="m12" type="text"></td>
         </tr>
         <tr style="background-color: grey;">
             <td >Piedra</td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p2" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p3" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p4" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p5" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p6" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p8" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p9" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p10" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p11" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="p12" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="p12" type="text"></td>
         </tr>
         <tr style="background-color: red;">
             <td>Ladrillo</td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l2" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l3" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l4" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l5" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l6" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l8" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l9" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l10" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l11" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="l12" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="l12" type="text"></td>
         </tr>
         <tr style="background-color: green;">
             <td>Oveja</td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o2" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o3" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o4" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o5" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o6" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o8" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o9" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o10" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o11" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="o12" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="o12" type="text"></td>
         </tr>
         <tr style="background-color: yellow;">
             <td style="color:black">Trigo</td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t2" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t3" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t4" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t5" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t6" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t8" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t9" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t10" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t11" type="text"></td>
-            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" onfocusout="guardar()" id="t12" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t2" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t3" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t4" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t5" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t6" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t8" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t9" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t10" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t11" type="text"></td>
+            <td><input pattern="[0-9]*" inputmode="numeric" class="tablaRecursos" oninput="guardar()" id="t12" type="text"></td>
         </tr>
 
     </table>
@@ -282,26 +141,25 @@
         </div>
 
     </div>
-    <div class="container" style="color:white; background-color:grey" >
-      
+    <div class="container" id="control-puntos">
         <h6 id="segundoTitulo">Control de puntos</h6>
-        <input   type="text" onfocusout="guardar()" id="nombrej1"><input type="range" value="2" id="j1"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()">
+        <input   type="text" oninput="guardar()" id="nombrej1"><input type="range" value="2" id="j1"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" oninput="ganador()">
 <output>2</output>
-        <input type="text" onfocusout="guardar()" id="nombrej2"><input type="range" value="2" id="j2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()">
+        <input type="text" oninput="guardar()" id="nombrej2"><input type="range" value="2" id="j2"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" oninput="ganador()">
 <output>2</output>
-        <input type="text" onfocusout="guardar()" id="nombrej3"><input type="range" value="2" id="j3" min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()">
+        <input type="text" oninput="guardar()" id="nombrej3"><input type="range" value="2" id="j3" min="2" max="10" oninput="this.nextElementSibling.value = this.value" oninput="ganador()">
 <output>2</output>
 <br>
-        <input type="text" onfocusout="guardar()" id="nombrej4"><input type="range" value="2" id="j4" min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()">
+        <input type="text" oninput="guardar()" id="nombrej4"><input type="range" value="2" id="j4" min="2" max="10" oninput="this.nextElementSibling.value = this.value" oninput="ganador()">
 <output>2</output>
-        <input type="text" onfocusout="guardar()" id="nombrej5"><input type="range" value="2" id="j5"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()">
+        <input type="text" oninput="guardar()" id="nombrej5"><input type="range" value="2" id="j5"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" oninput="ganador()">
 <output>2</output>
-        <input type="text" onfocusout="guardar()" id="nombrej6"><input type="range" value="2" id="j6"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" onchange="ganador()" >
+        <input type="text" oninput="guardar()" id="nombrej6"><input type="range" value="2" id="j6"  min="2" max="10" oninput="this.nextElementSibling.value = this.value" oninput="ganador()" >
 <output>2</output>
 
     </div>
     <br>
-    <div class = "container" style="color:white; background-color:blue">
+    <div class = "container" id="control-dados" >
     <h6 id="segundoTitulo" s>Control de dados</h6>
     <table class="tablaDatos">
         <tr>

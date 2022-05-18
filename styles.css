@@ -1,0 +1,219 @@
+.feedback {
+  background-color: #31b0d5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#mybutton {
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The side navigation menu */
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+.sidenav p {
+  padding: 0px 8px 0px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .subrayado {
+  text-decoration: underline;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .sidenav p {
+    font-size: 18px;
+  }
+}
+h4 {
+  color: white;
+}
+#segundoTitulo {
+  color: white;
+}
+body {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  background-color: rgb(2, 2, 90);
+}
+.botonNumero {
+  width: 100%;
+}
+#cssmadera {
+  background-color: SaddleBrown;
+  color: white;
+}
+#csspiedra {
+  background-color: grey;
+  color: white;
+}
+#cssladrillo {
+  background-color: red;
+  color: white;
+}
+#cssoveja {
+  background-color: darkgreen;
+  color: white;
+}
+#csstrigo {
+  background-color: rgb(255, 255, 0);
+  color: black !important;
+}
+#Recolectas {
+width: 100%;
+  color: white;
+  background-color: rgb(2, 2, 90);
+}
+.tablaRecursos {
+  width: 100%;
+}
+.tablaRecursosPrincipal td {
+  color: white;
+  border: 1px solid;
+}
+.tablaDatos td {
+  color: white;
+  border: 1px solid;
+}
+.tablaRecoleccion td {
+  color: white;
+  border: 1px solid;
+}
+output {
+  color: white;
+}
+.tablaRecursosPrincipal {
+  width: 100%;
+  background-color: rgb(2, 2, 90);
+  
+}
+
+#control-puntos{
+    width: 100%;
+    background-color: grey;    
+}
+
+.tablaDatos {
+  width: 100%;
+  background-color: rgb(2, 2, 90);
+}
+.tablaRecoleccion {
+    width: 100%;
+    background-color: rgb(2, 2, 90);
+  }
+#csssiete {
+  color: white;
+  background-color: black;
+}
+
+#control-dados{
+    color:white;
+    background-color:blue;
+
+}
+td {
+  text-align: center;
+  color: black;
+}
+footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
