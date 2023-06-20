@@ -9,7 +9,8 @@ function cambiarFondo(){
   document.body.style.backgroundImage  = "url('https://c4.wallpaperflare.com/wallpaper/854/394/509/landscape-catan-vr-4k-8k-wallpaper-preview.jpg')";
   
 }}
-  let salidaDados = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+
   let cantidadesDados 
   let Vmadera = 0
   let Vladrillo = 0
@@ -34,11 +35,11 @@ function cambiarFondo(){
       
       document.getElementById("cantidad"+numeroParseado).innerText=  parseInt(document.getElementById("cantidad"+numeroParseado).innerText) + 1   
       if (numero != 7){
-      let Vmadera  = document.getElementById("m"+numero).value
-      let Vladrillo  = document.getElementById("l"+numero).value
-      let Vpiedra  = document.getElementById("p"+numero).value
-      let Voveja  = document.getElementById("o"+numero).value
-      let Vtrigo  = document.getElementById("t"+numero).value
+      let Vmadera  = document.getElementById("m"+numeroParseado).value
+      let Vladrillo  = document.getElementById("l"+numeroParseado).value
+      let Vpiedra  = document.getElementById("p"+numeroParseado).value
+      let Voveja  = document.getElementById("o"+numeroParseado).value
+      let Vtrigo  = document.getElementById("t"+numeroParseado).value
       mensaje = `Recolectas:`
       document.getElementById("Recolectas").innerText = mensaje
       document.getElementById("cantidadMadera").innerHTML= Vmadera

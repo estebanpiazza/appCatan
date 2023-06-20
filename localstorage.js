@@ -222,6 +222,8 @@ localStorage.setItem("cantidad12",document.getElementById("cantidad12").innerTex
 }
 
 window.onload = function cargarDatos() {
+
+
  
 /* document.getElementById("j1").value = localStorage.getItem("j1");
   document.getElementById("j2").value = localStorage.getItem("j2");
@@ -297,21 +299,5 @@ window.onload = function cargarDatos() {
 document.getElementById("cantidad10").innerText=localStorage.getItem("cantidad10")
 document.getElementById("cantidad11").innerText=localStorage.getItem("cantidad11")
 document.getElementById("cantidad12").innerText=localStorage.getItem("cantidad12")
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 };
