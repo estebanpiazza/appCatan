@@ -61,7 +61,7 @@ function cambiarFondo(){
 
       
   }
-  guardar()
+
 }
 /* Set the width of the side navigation to 250px */
 function openNav() {
@@ -104,14 +104,10 @@ function sumarPuntos(numero) {
   let puntos = Number(document.getElementById("valor-generico"+numero).innerText)
   if(puntos == 10){ 
   let nombreGanador = document.getElementById("nombrej1").innerText
-  console.log(nombreGanador)
-  
-
           let ganador= ("El ganador es el jugador: "+ nombreGanador) 
           abrirModal(ganador)
     }else{
-      
-      puntos += 1
+            puntos += 1
       document.getElementById("valor-generico"+numero).innerText = puntos
     }
        

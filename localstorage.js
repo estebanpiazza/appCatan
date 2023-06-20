@@ -1,6 +1,17 @@
 
 function borrarData() {
 localStorage.clear();
+localStorage.setItem("cantidad2",0)
+localStorage.setItem("cantidad3",0)
+localStorage.setItem("cantidad4",0)
+localStorage.setItem("cantidad5",0)
+localStorage.setItem("cantidad6",0)
+localStorage.setItem("cantidad7",0)
+localStorage.setItem("cantidad8",0)
+localStorage.setItem("cantidad9",0)
+localStorage.setItem("cantidad10",0)
+localStorage.setItem("cantidad11",0)
+localStorage.setItem("cantidad12",0)
 /* document.getElementById("valor-generico1").innerText="2";
 document.getElementById("valor-generico2").innerText="2";
 document.getElementById("valor-generico3").innerText="2";
@@ -206,7 +217,7 @@ function guardar() {
   localStorage.setItem("l10", l10);
   localStorage.setItem("l11", l11);
   localStorage.setItem("l12", l12);
-console.log()
+
 localStorage.setItem("cantidad2",document.getElementById("cantidad2").innerText)
 localStorage.setItem("cantidad3",document.getElementById("cantidad3").innerText)
 localStorage.setItem("cantidad4",document.getElementById("cantidad4").innerText)
@@ -223,14 +234,6 @@ localStorage.setItem("cantidad12",document.getElementById("cantidad12").innerTex
 
 window.onload = function cargarDatos() {
 
-
- 
-/* document.getElementById("j1").value = localStorage.getItem("j1");
-  document.getElementById("j2").value = localStorage.getItem("j2");
-  document.getElementById("j3").value = localStorage.getItem("j3");
-  document.getElementById("j4").value = localStorage.getItem("j4");
-  document.getElementById("j5").value = localStorage.getItem("j5");
-  document.getElementById("j6").value = localStorage.getItem("j6");  */
   document.getElementById("nombrej1").value = localStorage.getItem("nombrej1");
   document.getElementById("nombrej2").value = localStorage.getItem("nombrej2");
   document.getElementById("nombrej3").value = localStorage.getItem("nombrej3");
@@ -296,8 +299,8 @@ window.onload = function cargarDatos() {
   document.getElementById("cantidad7").innerText=localStorage.getItem("cantidad7")
   document.getElementById("cantidad8").innerText=localStorage.getItem("cantidad8")
   document.getElementById("cantidad9").innerText=localStorage.getItem("cantidad9")
-document.getElementById("cantidad10").innerText=localStorage.getItem("cantidad10")
-document.getElementById("cantidad11").innerText=localStorage.getItem("cantidad11")
-document.getElementById("cantidad12").innerText=localStorage.getItem("cantidad12")
+  document.getElementById("cantidad10").innerText=localStorage.getItem("cantidad10")
+  document.getElementById("cantidad11").innerText=localStorage.getItem("cantidad11")
+  document.getElementById("cantidad12").innerText=localStorage.getItem("cantidad12")
 
 };
