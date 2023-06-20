@@ -49,11 +49,18 @@ function cambiarFondo(){
 
       
   }else{
-
+    document.getElementById("Recolectas").innerText = ""
+    document.getElementById("cantidadMadera").innerHTML= ""
+    document.getElementById("cantidadLadrillo").innerHTML= ""
+    document.getElementById("cantidadPiedra").innerHTML= ""
+    document.getElementById("cantidadOveja").innerHTML= ""
+    document.getElementById("cantidadTrigo").innerHTML= ""
       mensaje =  "Contá las cartas, si tenes más de 7 descartá. Si tenes una cantidad impar de cartas, se redondea a tu favor, es decir, hacia abajo.\n  Por ejemplo, si tiene 9 cartas debes devolver 4"
       abrirModal(mensaje)
+
       
   }
+  guardar()
 }
 /* Set the width of the side navigation to 250px */
 function openNav() {
@@ -90,4 +97,35 @@ window.onclick = function(event) {
 if (event.target == modal) {
   modal.style.display = "none";
 }
+}
+
+function sumarPuntos(numero) {
+  let puntos = Number(document.getElementById("valor-generico"+numero).innerText)
+  if(puntos == 10){ 
+  let nombreGanador = document.getElementById("nombrej1").innerText
+  console.log(nombreGanador)
+  
+
+          let ganador= ("El ganador es el jugador: "+ nombreGanador) 
+          abrirModal(ganador)
+    }else{
+      
+      puntos += 1
+      document.getElementById("valor-generico"+numero).innerText = puntos
+    }
+       
+
+  }
+
+ 
+
+
+function restarPuntos(numero) {
+
+  let puntos = Number(document.getElementById("valor-generico"+numero).innerText)
+  puntos -= 1
+  if(puntos<2){
+    puntos = 2
+  }
+  document.getElementById("valor-generico"+numero).innerText = puntos
 }

@@ -206,6 +206,19 @@ function guardar() {
   localStorage.setItem("l10", l10);
   localStorage.setItem("l11", l11);
   localStorage.setItem("l12", l12);
+console.log()
+localStorage.setItem("cantidad2",document.getElementById("cantidad2").innerText)
+localStorage.setItem("cantidad3",document.getElementById("cantidad3").innerText)
+localStorage.setItem("cantidad4",document.getElementById("cantidad4").innerText)
+localStorage.setItem("cantidad5",document.getElementById("cantidad5").innerText)
+localStorage.setItem("cantidad6",document.getElementById("cantidad6").innerText)
+localStorage.setItem("cantidad7",document.getElementById("cantidad7").innerText)
+localStorage.setItem("cantidad8",document.getElementById("cantidad8").innerText)
+localStorage.setItem("cantidad9",document.getElementById("cantidad9").innerText)
+localStorage.setItem("cantidad10",document.getElementById("cantidad10").innerText)
+localStorage.setItem("cantidad11",document.getElementById("cantidad11").innerText)
+localStorage.setItem("cantidad12",document.getElementById("cantidad12").innerText)
+
 }
 
 window.onload = function cargarDatos() {
@@ -272,4 +285,33 @@ window.onload = function cargarDatos() {
   document.getElementById("l10").value = localStorage.getItem("l10");
   document.getElementById("l11").value = localStorage.getItem("l11");
   document.getElementById("l12").value = localStorage.getItem("l12");
+
+  document.getElementById("cantidad2").innerText= localStorage.getItem("cantidad2")
+  document.getElementById("cantidad3").innerText=localStorage.getItem("cantidad3")
+  document.getElementById("cantidad4").innerText=localStorage.getItem("cantidad4")
+  document.getElementById("cantidad5").innerText=localStorage.getItem("cantidad5")
+  document.getElementById("cantidad6").innerText=localStorage.getItem("cantidad6")
+  document.getElementById("cantidad7").innerText=localStorage.getItem("cantidad7")
+  document.getElementById("cantidad8").innerText=localStorage.getItem("cantidad8")
+  document.getElementById("cantidad9").innerText=localStorage.getItem("cantidad9")
+document.getElementById("cantidad10").innerText=localStorage.getItem("cantidad10")
+document.getElementById("cantidad11").innerText=localStorage.getItem("cantidad11")
+document.getElementById("cantidad12").innerText=localStorage.getItem("cantidad12")
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
