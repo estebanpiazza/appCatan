@@ -12,13 +12,25 @@ localStorage.setItem("cantidad9",0)
 localStorage.setItem("cantidad10",0)
 localStorage.setItem("cantidad11",0)
 localStorage.setItem("cantidad12",0)
-/* document.getElementById("valor-generico1").innerText="2";
+document.getElementById("cantidad2").innerText= "0"
+document.getElementById("cantidad3").innerText="0"
+document.getElementById("cantidad4").innerText="0"
+document.getElementById("cantidad5").innerText="0"
+document.getElementById("cantidad6").innerText="0"
+document.getElementById("cantidad7").innerText="0"
+document.getElementById("cantidad8").innerText="0"
+document.getElementById("cantidad9").innerText="0"
+document.getElementById("cantidad10").innerText="0"
+document.getElementById("cantidad11").innerText="0"
+document.getElementById("cantidad12").innerText="0"
+document.getElementById("ultimoDado").innerText="Ultimo dado:"
+document.getElementById("valor-generico1").innerText="2";
 document.getElementById("valor-generico2").innerText="2";
 document.getElementById("valor-generico3").innerText="2";
 document.getElementById("valor-generico4").innerText="2";
 document.getElementById("valor-generico5").innerText="2";
 document.getElementById("valor-generico6").innerText="2";
-document.getElementById("j1").value = "2";
+/*  document.getElementById("j1").value = "2";
   document.getElementById("j2").value = "2";
   document.getElementById("j3").value = "2";
   document.getElementById("j4").value = "2";
@@ -80,6 +92,7 @@ document.getElementById("j1").value = "2";
   document.getElementById("l10").value = "";
   document.getElementById("l11").value = "";
   document.getElementById("l12").value = "";
+
 }
 
 function guardar() {

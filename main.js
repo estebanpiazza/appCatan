@@ -1,8 +1,13 @@
-let estadoFondo = true
-  
+localStorage.setItem("estadoFondo",true)
+let estadoFondo =  localStorage.getItem("estadoFondo")
+
+
+console.log(estadoFondo)
 function cambiarFondo(){
-  if ( estadoFondo == true){
+  if ( estadoFondo){
     estadoFondo = false
+    localStorage.setItem("estadoFondo",false)
+    console.log(localStorage.getItem("estadoFondo"))
   document.body.style.backgroundImage  = "url('negro.png')";
 }else{
   estadoFondo = true
@@ -17,17 +22,7 @@ function cambiarFondo(){
   let Vpiedra = 0
   let Voveja = 0
   let Vtrigo = 0
-  function ganador(){
-      for (let i = 1; i< 7;i++){
-          
-          let puntos = document.getElementById("j"+i).value
-          if(puntos == 10){
-              let nombreGanador = document.getElementById("nombrej"+i).value
-              let ganador= ("El ganador es el jugador: "+ nombreGanador) 
-              abrirModal(ganador)
-          }
-      }
-  }
+
   function recursosAgarrar (numero){
 
       document.getElementById("ultimoDado").innerText = "Ultimo dado: "+numero
@@ -102,10 +97,12 @@ if (event.target == modal) {
 
 function sumarPuntos(numero) {
   let puntos = Number(document.getElementById("valor-generico"+numero).innerText)
-  if(puntos == 10){ 
-  let nombreGanador = document.getElementById("nombrej1").innerText
-          let ganador= ("El ganador es el jugador: "+ nombreGanador) 
-          abrirModal(ganador)
+
+  if(puntos >= 9){ 
+    document.getElementById("valor-generico"+numero).innerText = 10
+    let nombreGanador = document.getElementById("nombrej"+numero).value
+    let ganador= ("El ganador es el jugador: "+ nombreGanador) 
+    abrirModal(ganador)
     }else{
             puntos += 1
       document.getElementById("valor-generico"+numero).innerText = puntos
